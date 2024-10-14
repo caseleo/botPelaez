@@ -1,19 +1,39 @@
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'es_MX'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DHs000005OYBS',
-				'ServiceChatwebDesk',
-				'https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561',
-				{
-					scrt2URL: 'https://app-energy-1504.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Centro Ortopédico Peláez</title>
+	<style>
+		h1 {
+			text-align: center;
+			color: #2c3e50;
+			margin-top: 50px;
 		}
-	};
-</script>
-<script type='text/javascript' src='https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	</style>
+	<script type="text/javascript">
+		function initEmbeddedMessaging() {
+			try {
+				embeddedservice_bootstrap.settings.language = 'es_MX'; // Ajusta el idioma a español mexicano
+				embeddedservice_bootstrap.init(
+					'00DHs000005OYBS',
+					'ServiceChatwebDesk',
+					'https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561',
+					{
+						scrt2URL: 'https://app-energy-1504.my.salesforce-scrt.com'
+					}
+				);
+			} catch (err) {
+				console.error('Error cargando el servicio de mensajería: ', err);
+			}
+		};
+	</script>
+</head>
+<body>
+	<h1>Bienvenido a Centro Ortopédico Peláez</h1>
+
+	<!-- Script para el servicio de chat -->
+	<script type="text/javascript" src="https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
+</body>
+</html>

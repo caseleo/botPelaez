@@ -1,20 +1,35 @@
+<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'es_MX'; // For example, enter 'en' or 'en-US'
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Centro Ortopédico Peláez</title>
+</head>
+<body>
+    <h1>Página del Centro Ortopédico Peláez</h1>
+    <p>Bienvenidos a nuestra página web.</p>
 
-			embeddedservice_bootstrap.init(
-				'00DHs000005OYBS',
-				'ServiceChatwebDesk',
-				'https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561',
-				{
-					scrt2URL: 'https://app-energy-1504.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <!-- Código de Salesforce para el bot -->
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'es_MX'; // Configuración de idioma
+
+                embeddedservice_bootstrap.init(
+                    '00DHs000005OYBS',
+                    'ServiceChatwebDesk',
+                    'https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561',
+                    {
+                        scrt2URL: 'https://app-energy-1504.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://app-energy-1504.my.site.com/ESWServiceChatwebDesk1728415760561/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
